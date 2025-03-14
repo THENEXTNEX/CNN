@@ -1,0 +1,17 @@
+# Ignore the virtual environment folder
+ore_classification_model/ore_classification_env/
+
+# Ignore other unnecessary files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.vscode/
+.idea/
+.env
+*.csv
+*.dat
+*.bin
+.ipynb_checkpoints/
+.DS_Store
+Thumbs.db

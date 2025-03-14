@@ -1,3 +1,3 @@
 # Ignore the virtual environment folder
 venv/
-ore_classification_env/
+ore_classification_model/ore_classification_env/

@@ -3,8 +3,9 @@ import os
 import numpy as np
 
 #folders contatining images and where to put
-input_folder = "ores/tin_ore"  
-output_folder = "training_tin_ores"  
+ore_name = "copper_ore"
+input_folder = "ores/train/copper_ore"  
+output_folder = "training_copper_ores"  
 os.makedirs(output_folder, exist_ok=True)
 
 # Get list of image files
@@ -26,7 +27,7 @@ for image_file in image_files:
     img = cv2.resize(img, (64, 64))
 
     # Save original resized image
-    cv2.imwrite(os.path.join(output_folder, f"tin_ore{counter:03}.png"), img)
+    cv2.imwrite(os.path.join(output_folder, f"{ore_name}{counter:03}.png"), img)
     counter += 1
 
     # Define transformations
@@ -40,7 +41,7 @@ for image_file in image_files:
 
     # Apply transformations and save
     for name, transformed_img in transformations:
-        cv2.imwrite(os.path.join(output_folder, f"tin_ore{counter:03}.png"), transformed_img)
+        cv2.imwrite(os.path.join(output_folder, f"{ore_name}{counter:03}.png"), transformed_img)
         counter += 1
 
 print("Processing complete. Images saved in:", output_folder)

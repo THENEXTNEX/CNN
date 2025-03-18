@@ -1,6 +1,6 @@
 # Ignore the virtual environment folder
 ore_classification_model/ore_classification_env/
-
+tfjs_env
 # Ignore other unnecessary files
 __pycache__/
 *.pyc

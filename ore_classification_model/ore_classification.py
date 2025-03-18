@@ -16,6 +16,14 @@ os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"  # 0 = all messages, 1 = info, 2 = warn
 tf.get_logger().setLevel('ERROR')
 print("Num GPUs Available:", len(tf.config.experimental.list_physical_devices('GPU')))
 
+from tensorflow.keras import mixed_precision
+policy = mixed_precision.Policy('mixed_float16')
+mixed_precision.set_global_policy(policy)
+
+physical_devices = tf.config.experimental.list_physical_devices('GPU')
+tf.config.experimental.set_memory_growth(physical_devices[0], True)
+
+
 # Define image size and batch size
 IMG_SIZE = (64, 64)  # Resize images to 128x128
 BATCH_SIZE = 16
@@ -97,3 +105,6 @@ plt.plot(history.history['accuracy'], label='Train Accuracy')
 plt.plot(history.history['val_accuracy'], label='Validation Accuracy')
 plt.legend()
 plt.show()
+
+# Save the model in TensorFlow's SavedModel format
+model.save('saved_model/my_model.h5')

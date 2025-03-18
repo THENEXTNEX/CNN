@@ -106,5 +106,4 @@ plt.plot(history.history['val_accuracy'], label='Validation Accuracy')
 plt.legend()
 plt.show()
 
-# Save the model in TensorFlow's SavedModel format
-model.save('saved_model/my_model.h5')
+model.save('my_model.h5')

@@ -1,0 +1,20 @@
+{
+  "name": "cnn",
+  "version": "1.0.0",
+  "description": "Development of CNN to identify ores in OSRS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/THENEXTNEX/CNN.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/THENEXTNEX/CNN/issues"
+  },
+  "homepage": "https://github.com/THENEXTNEX/CNN#readme"
+}

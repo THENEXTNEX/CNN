@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/THENEXTNEX/CNN/issues"
   },
-  "homepage": "https://github.com/THENEXTNEX/CNN#readme"
+  "homepage": "https://github.com/THENEXTNEX/CNN#readme",
+  "dependencies": {
+    "@tensorflow/tfjs": "^4.22.0"
+  }
 }
